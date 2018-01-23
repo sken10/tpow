@@ -15,6 +15,7 @@ setup(
     long_description = desc,
     author = pkg.__author__,
     author_email = 'shirakawa.kenichi@gmail.com',
+    url = 'https://github.com/sken10/tpow',
     install_requires = [
         'pyserial>=3.0',
     ],
