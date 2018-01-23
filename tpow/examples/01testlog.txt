@@ -1,0 +1,36 @@
+(testdist) f:\vpy\testdist\Lib\site-packages\tpow\examples>check_ds18b20_matchrom.py
+check ds18b20 by match-rom protocol
+ROMID : A3 00 00 07 4C B9 6D 28
+SPAD : 22 01 4B 46 7F FF 0E 10 4A
+  18.125 [degC]
+
+(testdist) f:\vpy\testdist\Lib\site-packages\tpow\examples>check_ds18b20_skiprom.py
+check ds18b20 by skip-rom protocol
+Assume only one 1-wire device on the bus.
+SPAD : 22 01 4B 46 7F FF 0E 10 4A
+  18.125 [degC]
+
+(testdist) f:\vpy\testdist\Lib\site-packages\tpow\examples>check_ds2438_matchrom.py
+check ds2438 by match-rom protocol
+ROMID : 42 00 00 02 19 BE 76 26
+SPAD : 00 08 13 D3 00 00 00 00 E3
+  19.031 [degC]    2.110 [V]   42.723 [%]
+
+(testdist) f:\vpy\testdist\Lib\site-packages\tpow\examples>check_ds2438_skiprom.py
+check ds2438 by skip-rom protocol
+Assume only one 1-wire device on the bus.
+SPAD : 00 00 13 D1 00 00 00 00 91
+  19.000 [degC]    2.090 [V]   42.032 [%]
+
+(testdist) f:\vpy\testdist\Lib\site-packages\tpow\examples>check_read_rom.py
+42 00 00 02 19 BE 76 26
+
+(testdist) f:\vpy\testdist\Lib\site-packages\tpow\examples>check_search_roms.py
+42 00 00 02 19 BE 76 26
+
+(testdist) f:\vpy\testdist\Lib\site-packages\tpow\examples>check_search_roms.py
+BA 00 00 07 4D D2 9A 28
+8F 00 00 03 52 E5 9E 28
+A3 00 00 07 4C B9 6D 28
+26 00 00 07 33 AB 73 28
+42 00 00 02 19 BE 76 26
