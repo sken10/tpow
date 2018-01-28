@@ -1,2 +1,1 @@
-REM twine upload --repository testpypi --skip-existing dist/*
-twine upload --repository testpypi dist/*
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
