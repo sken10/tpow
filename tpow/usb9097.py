@@ -59,12 +59,17 @@ class USB9097:
     def dat_write(self, buf):
         def _w(v):
             self.uart.write([v])
+            if v == 0xE3:
+                self.uart.write([v])
             return self.uart.read(1)
         self.set_mode(USB9097._MODE_DAT)
         return [_w(a) for a in buf]
         
     def dat_read(self, n):
-        return self.dat_write([0xFF]*n)
+        self.set_mode(USB9097._MODE_DAT)
+        self.uart.write([0xFF]*n)
+        data = self.uart.read(n)
+        return [bytes([a]) for a in data]
         
 def search_roms(bus):
     """basic rom search algorithm.
